@@ -1,0 +1,14 @@
+.page{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.navBar{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.pageRes{
+    text-align: center;
+}
