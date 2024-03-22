@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import { HeadText } from "./showHeadText";
+import showStyledImg from "./imgModule";
+
 
 export default function Page3() {
   return (
-    <div className='pageRes'>
-      <h1>PAGE 3</h1>
-    </div>
-  )
+    <>
+      <HeadText>Невероятно красивое небо в Краснодаре</HeadText>
+
+      {showStyledImg()}
+    </>
+  );
 }

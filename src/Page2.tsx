@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import showHeadText from "./showHeadText"
+
 
 export default function Page2() {
   return (
-    <div className='pageRes'>
-      <h1>PAGE 2</h1>
-    </div>
+    showHeadText("Не оч главная страница", "Здесь написано что-то не очень важное")
   )
 }

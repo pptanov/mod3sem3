@@ -1,27 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import {Switch, Table} from "antd"
-import {Button} from "antd"
+import { Table } from "antd"
+import { Button } from "antd"
 import axios from 'axios'
 import { ColumnsType } from 'antd/es/table'
-
-import Page1 from './Page1.tsx'
-import Page2 from './Page2.tsx'
-import Page3 from './Page3.tsx'
-import React, {Component} from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom'
+import showPText from './styledP.tsx'
 
 
 export default function DataTable() {
-  
   const [page, setPage] = useState(1);
-  let [dataSource, setDataSource] = useState();
-  let [dataSourceNext, setDataSourceNext] = useState();
+  const [dataSource, setDataSource] = useState();
+  const [dataSourceNext, setDataSourceNext] = useState();
 
   interface DataType {
     id: string;
@@ -40,6 +29,7 @@ export default function DataTable() {
       key: 'title',
     },
   ];
+
 
   const limit = 10;
   
@@ -64,9 +54,9 @@ export default function DataTable() {
     return (!dataSourceNext) ? true : false;
   }
 
-
-  let valueBackButton = isDisabledBack();
-  let valueForwardButton = isDisabledForward();
+  
+  const valueBackButton = isDisabledBack();
+  const valueForwardButton = isDisabledForward();
 
 
   return (
@@ -74,7 +64,7 @@ export default function DataTable() {
       <Table pagination={false} dataSource={dataSource} columns={columns} />
       <Button onClick={() => setPage(page-1)} disabled={valueBackButton}>Назад</Button>
       <Button onClick={() => setPage(page+1)} disabled={valueForwardButton}>Вперед</Button>
-      <p>Page: {page}</p>
+      {showPText(`${page}`)}
     </>
   )
 }
