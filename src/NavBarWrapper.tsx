@@ -47,6 +47,12 @@ const Navbar = () => {
         </li>
 
         <li className="page">
+          <ButtonStyled>
+            <Link to="/forms">Формы</Link>
+          </ButtonStyled>
+        </li>
+
+        <li className="page">
           <AuthorizeButton />
         </li>
 

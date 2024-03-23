@@ -4,6 +4,7 @@ import Page2 from './Page2.tsx'
 import Page3 from './Page3.tsx'
 import { Routes, Route } from 'react-router-dom'
 import DataTable from './Table.tsx'
+import FormsPage from './Forms.tsx'
 
 
 export default function MyRouting() {
@@ -23,6 +24,10 @@ export default function MyRouting() {
 
           <Routes>
             <Route path="/Table" element={<DataTable/>}/>
+          </Routes>
+
+          <Routes>
+            <Route path="/Forms" element={<FormsPage/>}/>
           </Routes>
     </>
   )
